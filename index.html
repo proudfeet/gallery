@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="style.css">
   <title>jQuery Gallery</title>
 </head>
 <body>
   <div class="container clearfix">
-    <div class="gallery">
+    <div class="gallery clearfix">
       <h1>jQuery Gallery</h1>
 
       <div class="previews">
@@ -19,7 +20,7 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <img src="images/fashion/top1large.jpg" />
+          <a class="singleImage" href="images/fashion/top1large.jpg"><img src="images/fashion/top1large.jpg" /></a>
       </div>
 
     </div>
@@ -27,17 +28,30 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+  <script type="text/javascript" src="/fancybox/jquery.easing-1.4.pack.js"></script>
+
   <script>
     $(function() {
-      $('.previews a').on('click',function(event){
+      $('.previews a').on('click', function(event){
         event.preventDefault();
 
         var path = $(this).data('full');
         console.log(path);
 
-        $('.full img').attr('src',src);
-
+        $('.full img').attr('src', path);
+       	$(".full img").hide();
+       	$(".full img").fadeIn();
       });
+
+      $("a.singleImage").fancybox({
+      	"hideOnContentClick":true
+      });
+
+      $(".previews img").on("click", function(){
+      	$(".clickedImage").removeClass("clickedImage");
+      	$(this).addClass("clickedImage");
+      });
+
     });
   </script>
 </body>

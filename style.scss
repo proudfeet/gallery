@@ -26,7 +26,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  	background: lighten($green, 20);
  }
 
- 	.wrapper {
+ 	.gallery {
  		margin: 100px auto;
  		background: darken($blue, 20);
  		width: 80%;
@@ -41,15 +41,16 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  		width: 100%;
  		height: 600px;
  		// background: url(http://www.lorempixel.com/800/400) no-repeat;
- 		border: 5px solid black;
  	}
 
 
- 	.previews {
- 		width: 150px;
- 		height: 100px;
- 		float: left;
- 		padding: 10px;
- 		background: black;
- 		margin: 100px 22px 20px;
+ 	img {
+ 		border: 3px solid lightgrey;
  	}
+
+ 	.previews img:hover, .clickedImage {
+ 		border: 3px solid grey;
+ 	}
+
+	
+ 	
