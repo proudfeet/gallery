@@ -2,13 +2,15 @@
 <html>
 <head>
 	<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css">
-  <title>jQuery Gallery</title>
+  <title>How to survive a HackerYou Bootcamp</title>
 </head>
 <body>
   <div class="container clearfix">
     <div class="gallery clearfix">
-      <h1>jQuery Gallery</h1>
+      <h1>How to survive a HackerYou Bootcamp</h1>
+
 
       <div class="previews">
           <a href="#" class="selected" data-full="images/fashion/top1large.jpg"><img src="images/fashion/top1small.jpg" /></a>
@@ -19,10 +21,10 @@
       </div>
 
       <div class="full">
-		<div class="magnifying"></div>
           <!-- first image is viewable to start -->
         <a class="singleImage" href="images/fashion/top1large.jpg"><img src="images/fashion/top1large.jpg" /></a>
       </div>
+
 
     </div>
   </div>
@@ -30,6 +32,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
   <script type="text/javascript" src="/fancybox/jquery.easing-1.4.pack.js"></script>
+  <script src="jquery.hoverizr.min.js"></script>
 
   <script>
     $(function() {
@@ -40,8 +43,14 @@
         console.log(path);
 
         $('.full img').attr('src', path);
+        $('a.singleImage').attr('href', path);
        	$(".full img").hide();
        	$(".full img").fadeIn();
+      });
+
+      $(".preview a").hoverizr({
+      	speedOut: "slow",
+      	effect: "greyscale"
       });
 
       $("a.singleImage").fancybox({
@@ -52,8 +61,6 @@
       	$(".clickedImage").removeClass("clickedImage");
       	$(this).addClass("clickedImage");
       });
-
-      
 
     });
   </script>

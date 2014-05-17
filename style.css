@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Special Elite', cursive;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -201,16 +201,23 @@ img {
 }
 
 body {
-  background: #6cc79c;
+  background: #262626;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  border: 3px solid lightgrey;
 }
 
 .gallery {
-  margin: 100px auto;
-  background: #3d9fdd;
-  width: 80%;
+  margin: 3% auto;
+  background: #ed3b32;
+  width: 100%;
   max-width: 1000px;
-  border: 5px solid white;
-  border-radius: 5px;
+  border: 5px solid #9E9CA6;
   box-shadow: 0 0 5px #333;
 }
 
@@ -219,6 +226,7 @@ body {
   width: 100%;
   height: 600px;
   position: relative;
+  text-align: center;
 }
 .full .magnifying {
   position: absolute;
@@ -230,10 +238,24 @@ body {
   border: 5px solid red;
 }
 
-img {
-  border: 3px solid lightgrey;
+h1 {
+  text-align: center;
 }
 
-.previews img:hover, .clickedImage {
-  border: 3px solid grey;
+.full img {
+  height: 500px;
+}
+
+.previews {
+  margin: 5% auto;
+}
+.previews img {
+  margin-left: 10%;
+}
+.previews img:hover {
+  border: 3px solid #030101;
+}
+
+.clickedImage {
+  border: 3px solid #030101;
 }
