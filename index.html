@@ -31,16 +31,13 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
-  <script type="text/javascript" src="/fancybox/jquery.easing-1.4.pack.js"></script>
-  <script src="jquery.hoverizr.min.js"></script>
-
+  <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
   <script>
     $(function() {
       $('.previews a').on('click', function(event){
         event.preventDefault();
 
         var path = $(this).data('full');
-        console.log(path);
 
         $('.full img').attr('src', path);
         $('a.singleImage').attr('href', path);
@@ -48,10 +45,6 @@
        	$(".full img").fadeIn();
       });
 
-      $(".preview a").hoverizr({
-      	speedOut: "slow",
-      	effect: "greyscale"
-      });
 
       $("a.singleImage").fancybox({
       	"hideOnContentClick":true

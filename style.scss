@@ -82,9 +82,12 @@ img {
 
  		img {
  			margin-left: 10%;
+ 			-webkit-filter: grayscale(1);
+ 			transition: all 0.3s;
  			
 			&:hover {
 				border: 3px solid $black;
+				-webkit-filter: grayscale(0);
 			}
  		}
  	}
