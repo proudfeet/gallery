@@ -196,7 +196,7 @@ button::-moz-focus-inner, input::-moz-focus-inner, legend {
 
 /* IE7 */
 body {
-  background: #262626;
+  background: #030101;
 }
 
 h1 {
@@ -209,7 +209,7 @@ img {
 
 .gallery {
   margin: 3% auto;
-  background: #ff4d4d;
+  background: #ed3b32;
   width: 100%;
   max-width: 1000px;
   border: 5px solid #9E9CA6;
@@ -225,10 +225,10 @@ img {
 }
 
 .previews {
-  margin: 5% auto;
+  margin: 2% auto;
 }
 .previews img {
-  margin-left: 10%;
+  margin-left: 9%;
 }
 .previews img:hover {
   border: 3px solid #030101;
